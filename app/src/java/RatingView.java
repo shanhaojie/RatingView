@@ -139,42 +139,13 @@ public class RatingView extends View {
     }
 
     /**
-     * 画出指定形状的图片
      *
      * @param bmp
-     * @param radius
+     * @param radius 
      * @return
      */
     private Bitmap drawShapeBitmap(Bitmap bmp, int radius) {
-//        Bitmap squareBitmap;// 根据传入的位图截取合适的正方形位图
-//        Bitmap scaledBitmap;// 根据diameter对截取的正方形位图进行缩放
-//        int diameter = radius * 2;
-////         传入位图的宽高
-//        int w = bmp.getWidth();
-//        int h = bmp.getHeight();
-//        // 截取长方形中处于中间位置最大的正方形图片
-//        int squarewidth = 0, squareheight = 0;// 矩形的宽高
-//        int x = 0, y = 0;
-//        if (h > w) {// 如果高>宽
-//            squarewidth = squareheight = w;
-//            x = 0;
-//            y = (h - w) / 2;
-//            // 截取正方形图片
-//            squareBitmap = Bitmap.createBitmap(bmp, x, y, squarewidth, squareheight);
-//        } else if (h < w) {// 如果宽>高
-//            squarewidth = squareheight = h;
-//            x = (w - h) / 2;
-//            y = 0;
-//            squareBitmap = Bitmap.createBitmap(bmp, x, y, squarewidth,squareheight);
-//        } else {
-//            squareBitmap = bmp;
-//        }
-////         对squareBitmap进行缩放为diameter边长的正方形位图
-//        if (squareBitmap.getWidth() != diameter || squareBitmap.getHeight() != diameter) {
-//            scaledBitmap = Bitmap.createScaledBitmap(squareBitmap, diameter,diameter, true);
-//        } else {
-//            scaledBitmap = squareBitmap;
-//        }
+
         Bitmap outputbmp = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), Config.ARGB_8888);
         Canvas canvas = new Canvas(outputbmp);// 创建一个相同大小的画布
         Paint paint = new Paint();// 定义画笔
@@ -260,7 +231,8 @@ public class RatingView extends View {
     }
 
     public void setScore(String score) {
-        this.score = score;
+        this.score = score; 
+        invalidate();
     }
 
 }
