@@ -1,0 +1,2 @@
+# RatingView
+由于项目需要写了一个精确的评分条支持double型评分
