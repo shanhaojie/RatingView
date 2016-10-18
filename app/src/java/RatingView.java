@@ -20,11 +20,7 @@ import android.widget.ImageView;
 import com.example.administrator.myapplication.R;
 
 /**
- * @author Joker_Ya
- */
-
-/**
- * Created by Administrator on 2016/8/8.
+ * Created by Hy on 2016/8/8.
  */
 public class RatingView extends View {
     private Context mContext;
